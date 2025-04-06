@@ -15,7 +15,7 @@ const AVAILABLE_COMMANDS = [
   "projects",
   "skills",
   "contact",
-  "resume",
+  // "resume",
   "clear",
   // "theme",
   "sudo hire_me",
@@ -54,9 +54,9 @@ export function processCommand(
             <li>
               <span className="text-yellow-400">contact</span> - Show contact information
             </li>
-            <li>
+            {/* <li>
               <span className="text-yellow-400">resume</span> - Download my resume
-            </li>
+            </li> */}
             <li>
               <span className="text-yellow-400">blog list</span> - View all blog posts
             </li>
@@ -186,28 +186,28 @@ export function processCommand(
     };
   }
 
-  if (lowerCommand === "resume") {
-    return {
-      command,
-      output: (
-        <div className="space-y-2">
-          <p>Downloading resume...</p>
-          <p>
-            <a
-              href="#"
-              className="text-blue-400 hover:underline"
-              onClick={(e) => {
-                e.preventDefault();
-                alert("This would download the resume in a real implementation");
-              }}
-            >
-              Click here if download doesn't start automatically
-            </a>
-          </p>
-        </div>
-      ),
-    };
-  }
+  // if (lowerCommand === "resume") {
+  //   return {
+  //     command,
+  //     output: (
+  //       <div className="space-y-2">
+  //         <p>Downloading resume...</p>
+  //         <p>
+  //           <a
+  //             href="#"
+  //             className="text-blue-400 hover:underline"
+  //             onClick={(e) => {
+  //               e.preventDefault();
+  //               alert("This would download the resume in a real implementation");
+  //             }}
+  //           >
+  //             Click here if download doesn't start automatically
+  //           </a>
+  //         </p>
+  //       </div>
+  //     ),
+  //   };
+  // }
 
   // if (lowerCommand.startsWith("theme")) {
   //   if (lowerCommand.includes("--dark")) {
