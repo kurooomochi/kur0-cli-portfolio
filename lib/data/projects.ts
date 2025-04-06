@@ -3,30 +3,41 @@ import type { Project } from "@/lib/types"
 export function getProjects(): Project[] {
   return [
     {
-      name: "E-commerce Platform",
+      name: "File Scanner",
       description:
-        "A full-stack e-commerce solution with product management, cart functionality, and payment processing.",
-      techStack: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
-      link: "https://github.com/johndoe/ecommerce-platform",
+        "A high-performance Go utility for concurrent pattern matching across multiple repositories. ",
+      techStack: ["Go", "CLI"],
+      link: "https://github.com/kur0byte/file-scanner",
     },
     {
-      name: "Task Management App",
-      description: "A Kanban-style task management application with real-time updates and team collaboration features.",
-      techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
-      link: "https://github.com/johndoe/task-management",
+      name: "Node Correlation ID Middleware",
+      description:
+        "Node.js middleware for correlation ID management in microservices, enabling distributed request tracing with AsyncLocalStorage. ",
+      techStack: ["Node.js", "Express", "Javascript"],
+      link: "https://github.com/kur0byte/node-correlation-id-mw",
     },
     {
-      name: "Weather Dashboard",
-      description: "A responsive weather application that displays current conditions and forecasts based on location.",
-      techStack: ["React", "Redux", "OpenWeather API", "Chart.js", "Netlify"],
-      link: "https://github.com/johndoe/weather-dashboard",
+      name: "Postgres Database Anonymization CLI Tool",
+      description:
+        "A tool for anonymizing sensitive data in PostgreSQL databases, ensuring compliance with data protection regulations.",
+      techStack: ["Node.js", "PostgreSQL", "Javascript", "CLI"],
+      link: "https://github.com/kur0byte/js-db-anonymizer",
     },
     {
-      name: "Portfolio Terminal",
-      description: "A terminal-style portfolio website (the one you're using right now!) with interactive commands.",
-      techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-      link: "https://github.com/johndoe/terminal-portfolio",
+      name: "TS Gitflow CLI",
+      description:
+        "A TypeScript CLI tool for managing Git branches and pull requests, streamlining the Git workflow.",
+      techStack: ["Node.js", "Typescript", "CLI", "Git"],
+      link: "https://github.com/kur0byte/gitflow-ts",
     },
+    {
+      name: "Kur0 CLI Portfolio",
+      description:
+        "Custom portfolio with an elegant CLI-like interface to interact with.",
+      techStack: ["Next.js", "Typescript", "Tailwind CSS", "shadcn/ui"],
+      link: "https://github.com/kur0byte/kur0-cli-portfolio",
+    },
+
   ]
 }
 
