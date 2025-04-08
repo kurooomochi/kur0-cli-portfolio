@@ -25,7 +25,7 @@ export function getSkills(): Skill[] {
     {
       category: "eCommerce and CMS",
       items: ["Shopify", "WooCommerce", "WordPress", "Contentful", "Strapi"],
-    }
+    },
   ]
 }
 

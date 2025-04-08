@@ -4,8 +4,8 @@ export function getContacts(): Contact[] {
   return [
     {
       platform: "Email",
-      link: "mailto:santiagozapatabohorquez@hotmail.com",
-      username: "santiagozapatabohorquez@hotmail.com",
+      link: "mailto:contact@kur0.me",
+      username: "contact@kur0.me",
     },
     {
       platform: "GitHub",

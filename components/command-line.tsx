@@ -55,16 +55,16 @@ export function CommandLine({ onCommand, onClear, theme }: CommandLineProps) {
     const trimmedInput = input.trim()
     if (!trimmedInput) return
 
+    // Add to command history
+    setCommandHistory((prev) => [trimmedInput, ...prev])
+    setHistoryIndex(-1)
+    setInput("")
+
     if (trimmedInput.toLowerCase() === "clear") {
       onClear()
     } else {
       onCommand(trimmedInput)
     }
-
-    // Add to command history
-    setCommandHistory((prev) => [trimmedInput, ...prev])
-    setHistoryIndex(-1)
-    setInput("")
   }
 
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
@@ -109,7 +109,7 @@ export function CommandLine({ onCommand, onClear, theme }: CommandLineProps) {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            className={`w-full bg-transparent outline-none ${textColor} ${placeholderColor}`}
+            className={`w-full bg-transparent outline-hidden ${textColor} ${placeholderColor}`}
             placeholder="Type a command..."
             autoComplete="off"
             spellCheck="false"
@@ -121,12 +121,12 @@ export function CommandLine({ onCommand, onClear, theme }: CommandLineProps) {
       </form>
 
       {suggestions.length > 0 && (
-        <div className="absolute left-0 mt-1 bg-gray-800 rounded p-2 z-10">
+        <div className="absolute left-0 mt-1 bg-gray-800 rounded-xs p-2 z-10">
           <div className="text-xs text-gray-400 mb-1">Suggestions:</div>
           {suggestions.map((suggestion, index) => (
             <div
               key={index}
-              className="text-sm cursor-pointer hover:bg-gray-700 px-2 py-1 rounded"
+              className="text-sm cursor-pointer hover:bg-gray-700 px-2 py-1 rounded-xs"
               onClick={() => {
                 setInput(suggestion)
                 inputRef.current?.focus()

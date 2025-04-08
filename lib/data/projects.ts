@@ -4,8 +4,7 @@ export function getProjects(): Project[] {
   return [
     {
       name: "File Scanner",
-      description:
-        "A high-performance Go utility for concurrent pattern matching across multiple repositories. ",
+      description: "A high-performance Go utility for concurrent pattern matching across multiple repositories. ",
       techStack: ["Go", "CLI"],
       link: "https://github.com/kur0byte/file-scanner",
     },
@@ -25,19 +24,16 @@ export function getProjects(): Project[] {
     },
     {
       name: "TS Gitflow CLI",
-      description:
-        "A TypeScript CLI tool for managing Git branches and pull requests, streamlining the Git workflow.",
+      description: "A TypeScript CLI tool for managing Git branches and pull requests, streamlining the Git workflow.",
       techStack: ["Node.js", "Typescript", "CLI", "Git"],
       link: "https://github.com/kur0byte/gitflow-ts",
     },
     {
       name: "Kur0 CLI Portfolio",
-      description:
-        "Custom portfolio with an elegant CLI-like interface to interact with.",
+      description: "Custom portfolio with an elegant CLI-like interface to interact with.",
       techStack: ["Next.js", "Typescript", "Tailwind CSS", "shadcn/ui"],
       link: "https://github.com/kur0byte/kur0-cli-portfolio",
     },
-
   ]
 }
 

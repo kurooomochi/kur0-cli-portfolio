@@ -21,6 +21,20 @@ export default function Terminal() {
     { text: "Access granted. Welcome to my portfolio terminal.", delay: 800 },
   ]
 
+  // Create a function to get the default header and help message
+  const getDefaultOutput = () => [
+    {
+      command: "",
+      output: <AsciiHeader />,
+      isSystem: true,
+    },
+    {
+      command: "",
+      output: "Type 'help' to see available commands.",
+      isSystem: true,
+    },
+  ]
+
   useEffect(() => {
     if (isInitializing && initializationStep < initializationSteps.length) {
       const timer = setTimeout(() => {
@@ -38,19 +52,7 @@ export default function Terminal() {
       return () => clearTimeout(timer)
     } else if (isInitializing && initializationStep === initializationSteps.length) {
       const timer = setTimeout(() => {
-        setHistory((prev) => [
-          ...prev,
-          {
-            command: "",
-            output: <AsciiHeader />,
-            isSystem: true,
-          },
-          {
-            command: "",
-            output: "Type 'help' to see available commands.",
-            isSystem: true,
-          },
-        ])
+        setHistory((prev) => [...prev, ...getDefaultOutput()])
         setIsInitializing(false)
       }, 1000)
 
@@ -70,7 +72,8 @@ export default function Terminal() {
   }
 
   const handleClearCommand = () => {
-    setHistory([])
+    // Instead of clearing everything, reset to just the header and help message
+    setHistory(getDefaultOutput())
   }
 
   const bgColor = theme === "dark" ? "bg-black" : "bg-gray-100"
@@ -79,7 +82,7 @@ export default function Terminal() {
 
   return (
     <div
-      className={`w-full max-w-4xl h-[80vh] ${bgColor} ${textColor} border ${borderColor} rounded-md overflow-hidden flex flex-col shadow-lg font-mono`}
+      className={`w-full max-w-4xl h-[70vh] ${bgColor} ${textColor} border ${borderColor} rounded-md overflow-hidden flex flex-col shadow-lg font-mono`}
     >
       <div className="flex items-center px-4 py-2 border-b border-gray-700 bg-gray-900">
         <div className="flex space-x-2">
