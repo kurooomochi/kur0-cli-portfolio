@@ -9,7 +9,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Terminal Portfolio",
   description: "A terminal-style portfolio for software engineers",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -19,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black text-gray-200 min-h-screen`}>
+      <body className={`${inter.className} bg-black text-gray-200 min-h-screen`} suppressHydrationWarning>
         <SiteNav />
         {children}
       </body>
@@ -29,4 +28,4 @@ export default function RootLayout({
 
 
 
-import './globals.css'
+// import './globals.css'
