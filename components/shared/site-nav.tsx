@@ -4,6 +4,8 @@ import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { Terminal, User, Briefcase, Code, Mail, FileText, Menu, X } from "lucide-react"
 import { useState } from "react"
+import Image from "next/image"
+import logo from "../../public/kur0.png"
 
 export default function SiteNav() {
   const pathname = usePathname()
@@ -16,15 +18,21 @@ export default function SiteNav() {
     { path: "/projects", label: "Projects", icon: <Briefcase size={16} /> },
     { path: "/skills", label: "Skills", icon: <Code size={16} /> },
     { path: "/contact", label: "Contact", icon: <Mail size={16} /> },
-    { path: "/blog", label: "Blog", icon: <FileText size={16} /> },
+    { path: "https://substack.com/@kuromochi", label: "Blog", icon: <FileText size={16} /> },
   ]
 
   return (
     <div className="bg-black border-b border-green-500/30 p-3 sticky top-0 z-10">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors">
-          <Terminal size={18} />
-          <span className="font-bold">kur0</span>
+          <Image
+            src={logo}
+            alt="kur0"
+            width={45}
+            height={45}
+            className="rounded-full bg-green-400"
+          />
+          <span className="font-bold text-green-400 font-mono">kuromochi</span>
         </Link>
 
         {/* Mobile menu button */}
