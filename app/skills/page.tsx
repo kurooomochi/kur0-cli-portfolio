@@ -19,7 +19,7 @@ export default function SkillsPage() {
   return (
     <main className="min-h-screen bg-gray-900 text-gray-200 font-mono">
       <div className="max-w-4xl mx-auto p-4 md:p-8">
-      <h1 className="text-cyan-400 lg:text-[8px] text-[6px] leading-tight mb-8 font-extrabold whitespace-pre-wrap">{asciiArt}</h1>
+      <h1 className="text-cyan-400 lg:text-[8px] text-[4px] leading-tight mb-8 font-extrabold whitespace-pre-wrap">{asciiArt}</h1>
         <div className="grid gap-6 md:grid-cols-2">
           {skills.map((category, index) => (
             <div key={index} className="border border-gray-700 rounded-md p-6">
