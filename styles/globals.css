@@ -2,7 +2,7 @@
 
 @source '../*.{js,ts,jsx,tsx,mdx}';
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
@@ -12,7 +12,7 @@
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
-@layer base {
+/* @layer base {
   *,
   ::after,
   ::before,
@@ -111,4 +111,4 @@
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
