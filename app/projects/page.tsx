@@ -1,25 +1,29 @@
-import { getProjects } from "@/lib/data/projects"
-import Link from "next/link"
+import {getProjects} from "@/lib/data/projects";
+import Link from "next/link";
 
 export const metadata = {
   title: "Projects | Terminal Portfolio",
   description: "Explore my portfolio of software development projects",
-}
+};
+
+const asciiArt = String.raw`
+          ██ ██████  ██████   ██████       ██ ███████  ██████ ████████ ███████ 
+         ██  ██   ██ ██   ██ ██    ██      ██ ██      ██         ██    ██      
+█████   ██   ██████  ██████  ██    ██      ██ █████   ██         ██    ███████ 
+       ██    ██      ██   ██ ██    ██ ██   ██ ██      ██         ██         ██ 
+      ██     ██      ██   ██  ██████   █████  ███████  ██████    ██    ███████ 
+`;
 
 export default function ProjectsPage() {
-  const projects = getProjects()
+  const projects = getProjects();
 
   return (
     <main className="min-h-screen bg-gray-900 text-gray-200 font-mono">
       <div className="max-w-4xl mx-auto p-4 md:p-8">
-        <h1 className="text-3xl font-bold text-cyan-400 mb-8">~/projects</h1>
-
+      <h1 className="text-cyan-400 md:text-[8px] text-[6px] leading-tight mb-8 font-extrabold whitespace-pre-wrap">{asciiArt}</h1>
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="border border-gray-700 rounded-md p-6 hover:border-green-500/50 transition-colors"
-            >
+            <div key={index} className="border border-gray-700 rounded-md p-6 hover:border-green-500/50 transition-colors">
               <h2 className="text-xl font-bold text-green-400 mb-2">{project.name}</h2>
               <p className="text-gray-300 mb-4">{project.description}</p>
 
@@ -44,6 +48,5 @@ export default function ProjectsPage() {
         </div>
       </div>
     </main>
-  )
+  );
 }
-

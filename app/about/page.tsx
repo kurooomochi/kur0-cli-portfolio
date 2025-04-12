@@ -5,14 +5,22 @@ export const metadata = {
   description: "Learn more about me and my background",
 }
 
+// At the top of your component, before the return statement
+const asciiArt = String.raw`
+          ██  █████  ██████   ██████  ██    ██ ████████ 
+         ██  ██   ██ ██   ██ ██    ██ ██    ██    ██    
+█████   ██   ███████ ██████  ██    ██ ██    ██    ██    
+       ██    ██   ██ ██   ██ ██    ██ ██    ██    ██    
+      ██     ██   ██ ██████   ██████   ██████     ██    
+`;
+
 export default function AboutPage() {
   const aboutContent = getAboutContent()
 
   return (
     <main className="min-h-screen bg-gray-900 text-gray-200 font-mono">
       <div className="max-w-4xl mx-auto p-4 md:p-8">
-        <h1 className="text-3xl font-bold text-cyan-400 mb-8">~/about</h1>
-
+      <h1 className="text-cyan-400 md:text-[8px] text-[6px] leading-tight mb-8 font-extrabold whitespace-pre-wrap">{asciiArt}</h1>
         <div className="space-y-6">
           <section className="border border-gray-700 rounded-md p-6">
             <h2 className="text-xl font-bold text-green-400 mb-4">{aboutContent.name}</h2>
@@ -29,13 +37,13 @@ export default function AboutPage() {
                     {exp.position} @ {exp.company}
                   </h3>
                   <p className="text-sm text-gray-400">{exp.period}</p>
-                  <p className="mt-2">{exp.description}</p>
+                  <p className="mt-2 whitespace-pre-line">{exp.description}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="border border-gray-700 rounded-md p-6">
+          {/* <section className="border border-gray-700 rounded-md p-6">
             <h2 className="text-xl font-bold text-green-400 mb-4">Education</h2>
             <div className="space-y-4">
               {aboutContent.education.map((edu, index) => (
@@ -48,7 +56,7 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
     </main>
