@@ -1,4 +1,4 @@
-import type { Project } from "@/lib/types"
+import type {Project} from "@/lib/types";
 
 export function getProjects(): Project[] {
   return [
@@ -34,6 +34,5 @@ export function getProjects(): Project[] {
       techStack: ["Next.js", "Typescript", "Tailwind CSS", "shadcn/ui"],
       link: "https://github.com/kur0byte/kur0-cli-portfolio",
     },
-  ]
+  ];
 }
-
