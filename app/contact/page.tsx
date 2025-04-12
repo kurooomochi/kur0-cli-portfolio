@@ -19,7 +19,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-gray-900 text-gray-200 font-mono">
       <div className="max-w-4xl mx-auto p-4 md:p-8">
-      <h1 className="text-cyan-400 md:text-[8px] text-[6px] leading-tight mb-8 font-extrabold whitespace-pre-wrap">{asciiArt}</h1>
+      <h1 className="text-cyan-400 lg:text-[8px] text-[6px] leading-tight mb-8 font-extrabold whitespace-pre-wrap">{asciiArt}</h1>
         <div className="grid gap-6 md:grid-cols-2">
           <div className="border border-gray-700 rounded-md p-6">
             <h2 className="text-xl font-bold text-green-400 mb-4">Get In Touch</h2>
