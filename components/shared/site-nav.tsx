@@ -22,7 +22,7 @@ export default function SiteNav() {
   ]
 
   return (
-    <div className="bg-black border-b border-green-500/30 p-3 sticky top-0 z-10">
+    <div className="bg-black border-b border-green-500/30 p-3 sticky top-0 z-10 font-mono font-bold">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors">
           <Image
