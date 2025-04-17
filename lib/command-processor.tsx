@@ -322,14 +322,18 @@ export function processCommand(
           <p>Redirecting to blog...</p>
           <p className="text-sm text-gray-400">
             If you're not redirected automatically,
-            <a href="/blog" className="text-blue-400 hover:underline ml-1">
+            <a href="https://substack.com/@kuromochi" className="text-blue-400 hover:underline ml-1">
               click here
             </a>
           </p>
-          {typeof window !== "undefined" &&
-            setTimeout(() => {
-              window.location.href = "/blog";
-            }, 1000)}
+          {(() => {
+            if (typeof window !== "undefined") {
+              setTimeout(() => {
+                window.location.href = "https://substack.com/@kuromochi";
+              }, 1000);
+            }
+            return null;
+          })()}
         </div>
       ),
     };
