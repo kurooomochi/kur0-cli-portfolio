@@ -9,8 +9,8 @@ export function getContacts(): Contact[] {
     },
     {
       platform: "GitHub",
-      link: "https://github.com/kur0byte",
-      username: "kur0byte",
+      link: "https://github.com/kurooomochi",
+      username: "kurooomochi",
     },
     {
       platform: "LinkedIn",
