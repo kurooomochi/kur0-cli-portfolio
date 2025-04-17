@@ -2,6 +2,13 @@
 
 @source '../*.{js,ts,jsx,tsx,mdx}';
 
+@theme inline {
+  --font-mono: var(--font-departure-mono);
+  --font-propo: var(--font-departure-propo);
+  --font-regular: var(--font-departure-regular);
+  --font-sans: var(--font-inter);
+}
+
 /* @custom-variant dark (&:is(.dark *)); */
 
 /*
