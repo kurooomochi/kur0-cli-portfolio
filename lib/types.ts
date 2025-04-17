@@ -23,13 +23,3 @@ export interface Contact {
   link: string
   username: string
 }
-
-export interface BlogPost {
-  slug: string
-  title: string
-  date: string
-  excerpt: string
-  tags: string[]
-  content: string[]
-}
-
