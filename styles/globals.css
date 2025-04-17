@@ -3,8 +3,8 @@
 @source '../*.{js,ts,jsx,tsx,mdx}';
 
 @theme inline {
-  --font-mono: var(--font-departure-mono);
-  --font-propo: var(--font-departure-propo);
-  --font-regular: var(--font-departure-regular);
-  --font-sans: var(--font-inter);
+  --font-mono: var(--font-departure-mono), 'Consolas', 'Liberation Mono', monospace;
+  --font-propo: var(--font-departure-propo), 'Consolas', 'Liberation Mono', monospace;
+  --font-regular: var(--font-departure-regular), 'Helvetica Neue', sans-serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
