@@ -28,16 +28,9 @@ export function CommandLine({ onCommand, onClear, theme }: CommandLineProps) {
     return () => clearInterval(interval)
   }, [])
 
-  // Focus input on mount and when clicked outside
+  // Focus input on mount
   useEffect(() => {
     inputRef.current?.focus()
-
-    const handleClick = () => {
-      inputRef.current?.focus()
-    }
-
-    document.addEventListener("click", handleClick)
-    return () => document.removeEventListener("click", handleClick)
   }, [])
 
   // Update suggestions when input changes
@@ -114,9 +107,9 @@ export function CommandLine({ onCommand, onClear, theme }: CommandLineProps) {
             autoComplete="off"
             spellCheck="false"
           />
-          {cursorVisible && input.length === 0 && (
+          {/* {cursorVisible && input.length === 0 && (
             <span className={`absolute left-0 top-0 ${cursorColor} animate-pulse`}>|</span>
-          )}
+          )} */}
         </div>
       </form>
 

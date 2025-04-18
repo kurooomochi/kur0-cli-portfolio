@@ -37,6 +37,7 @@ export default function SiteNav() {
 
         {/* Mobile menu button */}
         <button
+          type="button"
           className="md:hidden text-green-400 hover:text-green-300"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
