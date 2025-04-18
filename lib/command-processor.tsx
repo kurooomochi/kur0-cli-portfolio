@@ -81,7 +81,7 @@ export function processCommand(
       command,
       output: (
         <div className="space-y-2">
-          <p className="font-bold text-cyan-400">Hello, I'm John Doe</p>
+          <p className="font-bold text-cyan-400">Hey, I'm kur0</p>
           <p>
           Born in the digital age, I view software systems as dynamic, evolving organisms. With over six years of experience in software architecture and full-stack development, I focus on designing high-performance systems, leading teams, and enhancing user experiences through innovative platforms. My mission is to build elegant, scalable solutions that drive business success, staying at the forefront of technological advancements.
           </p>
