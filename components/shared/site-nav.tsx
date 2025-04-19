@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation"
 import { Terminal, User, Briefcase, Code, Mail, FileText, Menu, X } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
-import logo from "../../public/kur0.png"
+import logo from "../../public/kur0-sprite-optimized.png"
 
 export default function SiteNav() {
   const pathname = usePathname()
@@ -25,12 +25,14 @@ export default function SiteNav() {
     <div className="bg-black border-b border-green-500/30 p-3 sticky top-0 z-10 font-mono font-bold">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors">
+        <div className="flex items-center justify-center w-13 h-13 rounded-full bg-green-500/30 p-1 border border-green-500/50 shadow-sm">
           <Image
             src={logo}
             alt="kur0"
-            width={45}
-            height={45}
+            width={30}
+            height={30}
           />
+        </div>
           <div className="flex flex-col">
           <span className="font-extrabold text-green-400 font-mono">kur0</span>
           <span className=" text-green-400 font-mono text-xs">Software Engineer</span>
