@@ -30,9 +30,12 @@ export default function SiteNav() {
             alt="kur0"
             width={45}
             height={45}
-            className="rounded-full bg-green-400"
           />
-          <span className="font-bold text-green-400 font-mono">kuromochi</span>
+          <div className="flex flex-col">
+          <span className="font-extrabold text-green-400 font-mono">kur0</span>
+          <span className=" text-green-400 font-mono text-xs">Software Engineer</span>
+          </div>
+
         </Link>
 
         {/* Mobile menu button */}
